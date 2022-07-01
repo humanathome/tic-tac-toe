@@ -44,14 +44,11 @@ class Game
 
   def game_over?
     if @board.winner_found?(@player1.symbol)
-      puts "#{@player1.name} wins!"
-      true
+      p "#{@player1.name} wins!"
     elsif @board.winner_found?(@player2.symbol)
-      puts "#{@player2.name} wins!"
-      true
+      p "#{@player2.name} wins!"
     elsif board.board_full?
-      puts 'It\'s a tie!'
-      true
+      p 'It\'s a tie!'
     end
   end
 
