@@ -21,11 +21,11 @@ class Game
     loop do
       player_turn(@player1)
       @board.display_game_board
-      break if result
+      break if game_over?
 
       player_turn(@player2)
       @board.display_game_board
-      break if result
+      break if game_over?
     end
     play_again?
   end
@@ -42,12 +42,12 @@ class Game
     @board.place_symbol(field, player.symbol)
   end
 
-  def result
-    if @board.game_over?(@player1.symbol)
-      puts "#{player1.name} wins!"
+  def game_over?
+    if @board.winner_found?(@player1.symbol)
+      puts "#{@player1.name} wins!"
       true
-    elsif @board.game_over?(@player2.symbol)
-      puts "#{player2.name} wins!"
+    elsif @board.winner_found?(@player2.symbol)
+      puts "#{@player2.name} wins!"
       true
     elsif board.board_full?
       puts 'It\'s a tie!'

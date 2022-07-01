@@ -34,7 +34,7 @@ class Board
     @game_board[position - 1] = symbol
   end
 
-  def game_over?(symbol)
+  def winner_found?(symbol)
     WINNING_COMBINATIONS.any? do |combo|
       combo.all? { |field| @game_board[field - 1] == symbol }
     end
