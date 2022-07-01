@@ -23,7 +23,7 @@ class Board
   end
 
   def field_available?(field)
-    @game_board[field - 1] != 'X' && @game_board[field - 1] != 'O'
+    @game_board[field - 1].is_a?(Integer)
   end
 
   def board_full?
