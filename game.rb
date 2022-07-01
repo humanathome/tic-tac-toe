@@ -19,11 +19,11 @@ class Game
   def play
     @board.display_game_board
     loop do
-      player1_turn
+      player_turn(@player1)
       @board.display_game_board
       break if result
 
-      player2_turn
+      player_turn(@player2)
       @board.display_game_board
       break if result
     end
@@ -32,24 +32,14 @@ class Game
 
   private
 
-  def player1_turn
-    puts "#{@player1.name}, please choose an available number between 1 and 9 to place your symbol 'X':"
+  def player_turn(player)
+    puts "#{player.name}, please choose an available number between 1 and 9 to place your symbol '#{player.symbol}':"
     field = gets.chomp.to_i
-    until @player1.player_input_valid?(field) && @board.field_available?(field)
+    until player.player_input_valid?(field) && @board.field_available?(field)
       puts 'Invalid selection. Please enter a number between 1 and 9:'
       field = gets.chomp.to_i
     end
-    @board.place_symbol(field, 'X')
-  end
-
-  def player2_turn
-    puts "#{@player2.name}, please choose an available number between 1 and 9 to place your symbol 'O':"
-    field = gets.chomp.to_i
-    until @player2.player_input_valid?(field) && @board.field_available?(field)
-      puts 'Invalid selection. Please enter a number between 1 and 9:'
-      field = gets.chomp.to_i
-    end
-    @board.place_symbol(field, 'O')
+    @board.place_symbol(field, player.symbol)
   end
 
   def result
