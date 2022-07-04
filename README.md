@@ -6,4 +6,4 @@ placing three of their marks in a horizontal, vertical, or diagonal row is the w
 - Build a tic-tac-toe game on the command line where two human players can play against each other and the board is 
 displayed in between turns.
 
- [![Run on Repl.it](https://repl.it/badge/github/humanathome/tic-tac-toe)](https://repl.it/github/humanathome/tic-tac-toe)
+ [![Run on Repl.it](https://repl.it/badge/github/humanathome/tic-tac-toe)](https://repl.it/@humanathome/tic-tac-toe)
