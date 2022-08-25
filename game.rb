@@ -5,8 +5,6 @@ require_relative 'player'
 
 # main game class
 class Game
-  attr_reader :board, :player1, :player2
-
   def initialize
     puts 'Welcome to Tic Tac Toe! Player 1 has symbol X, Player 2 has symbol O.'
     @board = Board.new
@@ -47,7 +45,7 @@ class Game
       p "#{@player1.name} wins!"
     elsif @board.winner_found?(@player2.symbol)
       p "#{@player2.name} wins!"
-    elsif board.board_full?
+    elsif @board.board_full?
       p 'It\'s a tie!'
     end
   end
