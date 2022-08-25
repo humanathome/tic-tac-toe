@@ -21,6 +21,15 @@ succeeds in placing three of their marks in a horizontal, vertical, or diagonal 
 
 ### Run locally
 Prerequisites: ruby >= 3.0.1
-- clone the repository `git clone git@github.com:humanathome/tic-tac-toe.git`
-- cd into the cloned repository `cd tic-tac-toe`
-- run `ruby game.rb`
+- clone the repository  
+```
+git clone git@github.com:humanathome/tic-tac-toe.git
+```
+- cd into the cloned repository   
+```
+cd tic-tac-toe
+```
+- run   
+```
+ruby game.rb
+```
