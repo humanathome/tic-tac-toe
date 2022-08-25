@@ -8,8 +8,8 @@ succeeds in placing three of their marks in a horizontal, vertical, or diagonal 
 ### Features
 - Set players' names
 - Set player symbols automatically: first player has 'X', second player has 'O'
-- Display updated board between turns
-- Check for winner each turn
+- Display updated game board between turns
+- Check result after each player's turn
 - After max 9 turns, game is won or there is a tie
 - Chose to play again or exit
 
